@@ -1,0 +1,56 @@
+Build AI powered solutions by using microsoft aure database for postgresql.
+
+Azure ai extension:
+	It is a tool created by postgreSQL team at microsoft that provides seamless
+integration between your azure database for postgreSQL flexible server and azure AI and machine
+learning services.
+	Azure_ai extension enables seamless integration of generative AI capabalities.
+Generative AI language model:
+	1.Natural Language Understanding
+	2.semantic search and query expansion
+	3.content generation
+	4.sentiment analysis
+	5.Location based recommendations
+ 	6.Personalizatiom
+	7.Dynamic ranking and scoring.
+
+Before using azure_ai extension,it must be allowed and installed with the database,
+	1. Allowlist configuration - Add the extension to your allowlist by running show azure.extensions.
+	2.Installation - Connect to your target database and execute the following command to install extension,
+		CREATE EXTENSION IF NOT EXISTS azure_ai;
+Once installed, the extension creates four schemas within database,
+	azure_ai - configuration table and function for interacting with extension.
+	azure_cognitive - functions and composite types related to azure cognitive services 
+	azure_ml - functions related to azure machine learning inference
+	azure_openai - functions related to azure openAI.
+To configure the extension, provide the necessary endpoints and API keys for authentication,
+	1.setting values
+	azure_ai.set_setting() function allows you to set various configuration values
+	2.Retrieving settings
+	azure_ai.get_setting() function lets you retrieve the values you previously set using set_setting().
+To install vector extension using the create extion command by,
+		CREATE EXTENSION IF NOT EXISTS vector;
+
+	Deploy resources into azure subscription,
+
+	1.Select cloud shell in azure portal toolbar to open a new cloudshell at the bottom of browser window,open bash shell.
+	2. In azure portal, navigate to newly created azure database for postgresql flexible server.
+	3. In the resouce menu, under settings, select database and select connect for the rental database.
+	
+	Install and configure the azure_ai extension
+
+	show azure.extensions;
+	create extension if not exists azure_ai;
+
+configure the connection to your azure openAI account,
+	
+	Go to keys and endpoints and copy the keys and endpoints that is shown.
+	Then open the cloudshell and use the command
+		 SELECT azure_ai.set_setting('azure_openai.endpoint', '{endpoint}');
+To enable the vector extension, need to run the command in the cloud shell
+	 CREATE EXTENSION vector;
+
+
+ASSESSMENT:
+
+		
