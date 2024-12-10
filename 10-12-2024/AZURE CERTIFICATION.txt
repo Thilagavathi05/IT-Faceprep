@@ -1,0 +1,61 @@
+Deploy and administer Linux virtual machine on microsoft azure.
+
+Things to do before configuring virtual machines,
+	1.Network configuration
+	2.Name
+	3.Location of the virtual machine
+	4.Size of the virtual machine
+	5.Pricing model and estimation of costs
+	6.Azure storage to use with the virtual macgine
+	7.Operating system for the virtual machine.
+
+ Connection of virtual machine supports two options as windows and Linux. using bastion
+Remote desktop file RDP and ssh for linux.
+
+Monitor azure virtual machines with azure monitor
+	The monitoring metrics automatically monitors a predefined set of metrices for every azure VM,
+and retains data for 93 days with some exceptions.
+
+	Logs are recorded system events that contain a timestamp and different types of structured or
+free form data. It automatically records activity logs for all azure resources.
+ 	The monitoring layers has a distinct set of telemetry and monitoring requirements,
+
+	1.Host VM
+	2.Guest Operating System(OS)
+	3.CLient workloads
+	4.Applictions that run on the VM.
+Alert rules:
+	Alert proactively notify you of specified occurences and patterns in your VM host metrices.
+Recommended alert rules are a predefined set of alert rules based on commonly monitored host metrics.
+
+On the Basics tab of the Create a virtual machine page:
+
+    In the Subscription field, select the correct subscription if not already selected.
+    Under Resource group:
+        Select Create new.
+        Under Name, enter learn-monitor-vm-rg.
+        Select OK.
+    For Virtual machine name, enter monitored-linux-vm.
+    For Image, select Ubuntu Server 20.04 LTS - x64 Gen2.
+Protect virtual machine using azure backup
+Manage virtual machine using azure cli
+Implement access management for azure resources
+configure azure files and azure file sync
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
