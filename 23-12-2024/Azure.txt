@@ -1,0 +1,62 @@
+Azure
+	Capital expenditure versus operational expenditure
+Capital expenditure - has sone key characteristics that,
+	1. own expenditure
+	2. Big initial investment
+	3. Lot of maintenance required
+		Support staff
+		Power and networking
+		Hardware failures etc...
+Operational expenditure - renting some infrastructure of buying services
+	1.Rent infrastructure
+	2.No initial investment - pay for what you use
+	3.Minimal maintenance - operations team
+CONSUMPTION BASED MODEL:
+	You can pay only for the resources as much as the resources that you consumed.
+
+KUBERNETES(AKS - Azure Kubernetes Service)
+
+	It is a kind of an open source platform for automating the deploymnet
+scaling and management of the containerized application
+	Cluster, Container
+CONTAINER:
+
+	A container typically refers to a lightweight, portable and consistent environment
+that packages an application and all its dependencies, ensuring it runs consistently across
+different environment.
+	A container is a standardized unit of software that includes everything needed to run 
+an application: the code, runtime, libraries, and configurations.
+	Containers are isolated from each other and the host environment but share the 
+same operating system kernel, making them lightweight and efficient.
+	DOCKER is a popular platform for creating and managing containers.
+	KUBERNETES is an orchestration platform used to manage and scale containerized
+applications.
+AZURE SERVICES FOR CONTAINERS:
+	1.AKS-Azure Kubernetes Service - It offers  simplified kubernetes cluster management
+with features like scaling, updates and monitoring.
+
+	2.ACI - Azure Container Instances - A lightweight, serverless way to run containers without managing
+underlying infrastructure. Suitable for single container or small workloads.
+
+	3.Azure App Service for Containers - A fully managed platform for deploying web apps or API using containers
+Supports custom docker containers and integrates with CI/CD pipelines.
+
+	4.Azure Red Hat OpenShift - A managed Kubernetes service built on Red Hat OpenShift for running containers.
+Provides additional enterprise features and openshift compatibility.
+
+	5. ACR-Azure Container Registry - A private registry for storing and managing container images. 
+Supports integration with other azure services like ACI, AKS and app services.
+
+CONTAINER WORKS IN AZURE:
+
+	1.BUILD THE CONTAINER:
+		Developers create a container image using docker or other container tools.The image contains
+the application and its dependencies.
+	2. STORE THE CONTAINER:
+		The image is stored in a registry, such as docker hub or azure container registry.
+	3.DEPLOY THE CONTAINER:
+		The container image is pulled from the registry and deployed to an azure service
+like ACI,AKS or app service.
+	4.RUN THE CONTAINER:
+		Once deployed, the container runs in the specified azure environment and serves the application
+to the users.
